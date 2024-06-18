@@ -41,3 +41,9 @@ test('parameterized methods @smoke', async({page, globalsQaURL}) => {
     // await pm.onDatePickerPage().selectCommonDatePickerDateFromToday(5)
     // await pm.onDatePickerPage().selectDatePickerWithRangeFromToday(1, 4)
 })
+
+test.only('testing with argos ci', async({page}) => {
+    const pm = new PageManager(page)
+    await pm.navigateTo().formLayoutsPage()
+    await pm.navigateTo().datePickerPage()
+})
